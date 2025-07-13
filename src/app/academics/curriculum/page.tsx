@@ -23,10 +23,10 @@ const lexend = Lexend({
 export default function Curriculum() {
   return (
     <div
-      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify`}
+      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify min-h-screen`}
     >
       {/* Header Section */}
-      <header>
+      <header className="sticky top-0 z-50 w-full">
         <StickyHeader />
         <StickyHeaderTwo />
       </header>
@@ -34,14 +34,14 @@ export default function Curriculum() {
       {/* Admission Enquiry button position is fixed */}
       <Link
         href="/admission_enquiry"
-        className="fixed rotate-90 top-72 -left-[78px] text-xs animate-pulse flex items-center bg-red-700 text-white px-3 py-1 font-light rounded-t-xl border border-white cursor-pointer z-99"
+        className="fixed rotate-90 top-72 -left-[78px] text-xs animate-pulse flex items-center bg-red-700 text-white px-3 py-1 font-light rounded-t-xl border border-white cursor-pointer z-50 md:top-72 md:-left-[78px] sm:top-32 sm:-left-[60px] lg:top-80 lg:-left-[90px] xl:top-96 xl:-left-[100px]"
       >
         ADMISSION ENQUIRY <FiArrowUpRight className="text-lg" />
       </Link>
 
       {/* Acddemics Background image */}
       <Image
-        className="w-full"
+        className="w-full h-40 sm:h-64 md:h-80 lg:h-96 object-cover"
         src={
           "https://img.freepik.com/premium-photo/photograph-indian-school-girl-aged-1215_1177187-43828.jpg?w=826"
         }
@@ -51,21 +51,21 @@ export default function Curriculum() {
       />
 
       {/* Academics Description */}
-      <section className="xl:mx-20 xl:py-16 lg:mx-12 lg:py-10 md:mx-9 md:py-10">
+      <section className="mx-2 sm:mx-4 md:mx-9 lg:mx-12 xl:mx-20 py-4 md:py-10 lg:py-10 xl:py-16">
         <div>
           <Fade direction="left" triggerOnce={true}>
-            <h1 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl">
+            <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Academics{" "}
               <span className="text-[#1B6B8F] font-bold">Innovators</span>
             </h1>
-            <h2 className="xl:text-xl lg:text-lg md:-mt-1">
+            <h2 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl md:-mt-1">
               Fueling Intellectual Growth at Atlantic Global School
             </h2>
           </Fade>
 
-          <div className="flex justify-between items-center xl:gap-0 xl:mt-0 lg:mt-7 lg:gap-5 md:mt-5 md:gap-3">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 xl:gap-0 xl:mt-0 lg:mt-7 lg:gap-5 md:mt-5 md:gap-3">
             <Fade direction="up" triggerOnce={true}>
-              <p className="xl:w-[90%] xl:text-[16px] xl:h-full lg:text-sm md:w-[80%] md:text-xs">
+              <p className="w-full md:w-[80%] xl:w-[90%] text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] h-auto md:h-48 lg:h-80 xl:h-full overflow-y-auto">
                 Atlantic Global School is committed to crafting a
                 forward-thinking curriculum that shapes students into
                 well-rounded, future-ready individuals capable of thriving in an
@@ -98,7 +98,7 @@ export default function Curriculum() {
               <Image
                 alt=""
                 src={Description_Image}
-                className="justify-self-end shadow-2xl xl:w-9/12 md:w-full"
+                className="justify-self-end shadow-2xl w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover"
               />
             </Fade>
           </div>
@@ -107,14 +107,14 @@ export default function Curriculum() {
 
       {/* Foundation Section */}
       <section
-        className={`bg-linear-to-r from-blue-500 to-cyan-200 w-full flex justify-between xl:gap-8 xl:pt-20 xl:pb-7 xl:px-20 lg:pt-14 lg:pb-6.5 lg:gap-5 md:gap-6 md:pt-12 md:pb-5 md:px-12`}
+        className={`bg-linear-to-r from-blue-500 to-cyan-200 w-full flex flex-col md:flex-row justify-between gap-4 md:gap-6 lg:gap-5 xl:gap-8 pt-4 md:pt-12 lg:pt-14 xl:pt-20 pb-4 md:pb-5 lg:pb-6.5 xl:pb-7 px-2 md:px-12 xl:px-20`}
       >
         <Fade
           direction="left"
           triggerOnce={true}
-          className="xl:w-[45%] lg:w-[37%] md:w-[50%]"
+          className="w-full md:w-[50%] lg:w-[37%] xl:w-[45%]"
         >
-          <div className="flex flex-col justify-between h-full lg:py-2 md:py-2">
+          <div className="flex flex-col justify-between h-full gap-2 lg:py-2 md:py-2">
             <Image
               src={
                 "https://img.freepik.com/free-photo/it-s-time-start-new-school-year_329181-10456.jpg?t=st=1743748598~exp=1743752198~hmac=0670944e2181a42322697797bb2e764184e24d6faa4e80effbac7eb63f6af781&w=996"
@@ -122,7 +122,7 @@ export default function Curriculum() {
               alt=""
               width={1000}
               height={1000}
-              className="self-end shadow-2xl xl:w-[68%] lg:w-[75%] md:w-[70%] md:rounded"
+              className="self-end shadow-2xl w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover md:rounded"
             />
             <Image
               src={
@@ -131,23 +131,23 @@ export default function Curriculum() {
               alt=""
               width={1000}
               height={1000}
-              className="shadow-2xl xl:w-[68%] lg:w-[75%] md:w-[70%] md:rounded"
+              className="shadow-2xl w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover md:rounded"
             />
           </div>
         </Fade>
 
-        <div className="xl:w-[55%] lg:w-[63%] md:w-[57%]">
+        <div className="w-full md:w-[57%] lg:w-[63%] xl:w-[55%]">
           <Fade direction="down" triggerOnce={true}>
-            <h1 className="font-semibold xl:text-3xl lg:text-2xl md:text-xl">
+            <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl">
               The Primary Learning Curriculum
             </h1>
-            <h2 className="font-light xl:text-2xl lg:text-xl md:text-lg md:-mt-1.5">
+            <h2 className="font-light text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl md:-mt-1.5">
               Flourishing Foundations
             </h2>
           </Fade>
 
           <Fade direction="right" triggerOnce={true}>
-            <ul className="list-disc xl:leading-5 xl:text-[16px] xl:mt-5 xl:ml-5 lg:leading-3.75 lg:text-sm md:leading-3.25 md:mt-3 md:text-[11px] md:ml-4">
+            <ul className="list-disc text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] leading-4 xl:leading-5 mt-2 md:mt-3 xl:mt-5 ml-2 md:ml-4 xl:ml-5">
               <li>
                 The curriculum creates a joyful and engaging learning
                 experience, ensuring that our youngest Pacificans embark on
@@ -194,7 +194,7 @@ export default function Curriculum() {
       </section>
 
       {/* Foundation Two Section */}
-      <section className="xl:mx-20 xl:pt-18 xl:pb-16 lg:mx-12 lg:py-14 md:mx-9 md:py-12">
+      <section className="mx-2 sm:mx-4 md:mx-9 lg:mx-12 xl:mx-20 py-4 md:py-12 lg:py-14 xl:pt-18 xl:pb-16">
         <div>
           <Fade direction="up" triggerOnce={true}>
             <h1 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl md:tracking-tight">
@@ -209,8 +209,8 @@ export default function Curriculum() {
           </Fade>
         </div>
 
-        <div className="flex justify-between items-center xl:-mt-5 xl:gap-28 lg:mt-2 lg:gap-25 lg:mx-6 md:mt-2 md:gap-14 md:mx-5">
-          <ul className="list-disc xl:text-[16px] xl:w-[45%] lg:text-sm md:w-[65%] md:text-xs">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 xl:-mt-5 xl:gap-28 lg:mt-2 lg:gap-25 lg:mx-6 md:mt-2 md:gap-14 md:mx-5">
+          <ul className="list-disc w-full md:w-[65%] xl:w-[45%] text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px]">
             <Fade direction="left" triggerOnce={true}>
               <li>
                 The Preparatory Stage curriculum is designed to equip students
@@ -235,19 +235,23 @@ export default function Curriculum() {
             </Fade>
           </ul>
 
-          <div className="flex flex-col xl:w-[40%] lg:gap-3 md:w-[50%] md:gap-2">
+          <div className="flex flex-col w-full md:w-[50%] xl:w-[40%] gap-2 lg:gap-3">
             <Fade direction="right" triggerOnce={true}>
-              <Image src={CraftTopImage} alt="" className="w-full shadow-lg" />
-              <div className="flex justify-center lg:gap-3 md:gap-2">
+              <Image
+                src={CraftTopImage}
+                alt=""
+                className="w-full h-24 sm:h-32 md:h-40 lg:h-56 xl:h-64 object-cover shadow-lg"
+              />
+              <div className="flex justify-center gap-2 lg:gap-3">
                 <Image
                   src={CraftBottomOneImage}
                   alt=""
-                  className="shadow-lg md:w-[48.5%]"
+                  className="shadow-lg w-1/2 h-20 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover"
                 />
                 <Image
                   src={CraftBottomTwoImage}
                   alt=""
-                  className="shadow-lg md:w-[48.5%]"
+                  className="shadow-lg w-1/2 h-20 sm:h-24 md:h-32 lg:h-40 xl:h-48 object-cover"
                 />
               </div>
             </Fade>
@@ -256,8 +260,8 @@ export default function Curriculum() {
       </section>
 
       {/* Bottom Section */}
-      <section className="flex justify-between xl:gap-5 lg:gap-4 md:mx-8 md:gap-3 md:mb-12">
-        <div className="w-[50%] border border-gray-200 shadow-lg xl:p-5 xl:rounded-lg lg:p-4 md:p-3 md:rounded">
+      <section className="flex flex-col md:flex-row justify-between gap-4 xl:gap-5 lg:gap-4 md:mx-8 md:gap-3 md:mb-12 py-4">
+        <div className="w-full md:w-[50%] border border-gray-200 shadow-lg p-2 md:p-3 lg:p-4 xl:p-5 rounded-lg">
           <Fade direction="up" triggerOnce={true}>
             <Image
               src={
@@ -266,17 +270,17 @@ export default function Curriculum() {
               alt=""
               width={1000}
               height={1000}
-              className="shadow-xl xl:rounded-t-lg md:rounded-t"
+              className="shadow-xl w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover rounded-t"
             />
-            <div className="xl:mx-8 lg:mx-6 md:mx-4">
-              <h2 className="xl:text-2xl lg:text-xl xl:mt-8 lg:tracking-normal lg:mt-5 md:font-bold md:text-lg md:tracking-tighter md:mt-4">
+            <div className="mx-2 md:mx-4 lg:mx-6 xl:mx-8">
+              <h2 className="font-semibold text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl mt-2 md:mt-4 lg:mt-5 xl:mt-8 tracking-tight">
                 The Middle School{" "}
                 <span className="text-[#1B6B8F] font-bold">Curriculum</span>
               </h2>
-              <h3 className="font-semibold xl:text-xl xl:-mt-1 lg:text-lg lg:-mt-1.5 md:-mt-2">
+              <h3 className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-1 md:-mt-2 lg:-mt-1.5 xl:-mt-1">
                 Exploring Growth
               </h3>
-              <ul className="list-disc justify-self-end xl:w-[97%] xl:text-[16px] xl:mt-6 lg:w-[96%] lg:text-sm lg:mt-5 md:w-[94%] md:text-xs md:mt-3">
+              <ul className="list-disc justify-self-end w-full xl:w-[97%] lg:w-[96%] md:w-[94%] text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] mt-2 md:mt-3 lg:mt-5 xl:mt-6">
                 <li>
                   Designed on the foundation of in-depth research and
                   inquiry-based learning, providing students with opportunities
@@ -306,7 +310,7 @@ export default function Curriculum() {
           </Fade>
         </div>
 
-        <div className="w-[50%] border border-gray-200 shadow-lg xl:p-5 xl:rounded-lg lg:p-4 md:p-3 md:rounded">
+        <div className="w-full md:w-[50%] border border-gray-200 shadow-lg p-2 md:p-3 lg:p-4 xl:p-5 rounded-lg mt-4 md:mt-0">
           <Fade direction="up" triggerOnce={true}>
             <Image
               src={
@@ -315,18 +319,18 @@ export default function Curriculum() {
               alt=""
               width={1000}
               height={1000}
-              className="shadow-xl xl:rounded-t-lg md:rounded-t"
+              className="shadow-xl w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover rounded-t"
             />
 
-            <div className="xl:mx-8 lg:mx-6 md:mx-4">
-              <h2 className="xl:text-2xl lg:text-xl xl:mt-8 lg:tracking-normal lg:mt-5 md:font-bold md:text-lg md:tracking-tighter md:mt-4">
+            <div className="mx-2 md:mx-4 lg:mx-6 xl:mx-8">
+              <h2 className="font-semibold text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl mt-2 md:mt-4 lg:mt-5 xl:mt-8 tracking-tight">
                 The Secondary Stage{" "}
                 <span className="text-[#1B6B8F] font-bold">Curriculum</span>
               </h2>
-              <h3 className="font-semibold xl:text-xl xl:-mt-1 lg:text-lg lg:-mt-1.5 md:-mt-2">
+              <h3 className="font-semibold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mt-1 md:-mt-2 lg:-mt-1.5 xl:-mt-1">
                 Breaking Barriers
               </h3>
-              <ul className="list-disc justify-self-end xl:w-[97%] xl:text-[16px] xl:mt-6 lg:w-[96%] lg:text-sm lg:mt-5 md:w-[94%] md:text-xs md:mt-3">
+              <ul className="list-disc justify-self-end w-full xl:w-[97%] lg:w-[96%] md:w-[94%] text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] mt-2 md:mt-3 lg:mt-5 xl:mt-6">
                 <li>Rooted in research and collaborative learning.</li>
                 <li>
                   Emphasizes experiential, integrated, inquiry-led, and

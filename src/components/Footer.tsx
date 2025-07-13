@@ -9,9 +9,9 @@ export default function Footer() {
       {/* Quick Links Section */}
       <section
         id="contact"
-        className="flex justify-around items-start bg-[#f8f6f6] w-full xl:gap-5 xl:pt-16 xl:pb-9 md:px-10 md:pt-10 md:pb-7"
+        className="flex flex-col sm:flex-row flex-wrap justify-around items-start bg-[#f8f6f6] w-full gap-6 sm:gap-5 md:gap-8 xl:gap-10 pt-6 sm:pt-10 md:pt-12 xl:pt-16 pb-4 sm:pb-7 md:pb-9 xl:pb-12 px-4 sm:px-6 md:px-10"
       >
-        <div>
+        <div className="mb-6 sm:mb-0 min-w-[150px]">
           <h3 className="text-[#212529] font-semibold xl:text-2xl xl:mb-7 lg:text-xl md:mb-4 md:text-lg">
             QUICK LINKS
           </h3>
@@ -53,7 +53,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div>
+        <div className="mb-6 sm:mb-0 min-w-[150px]">
           <h3 className="text-[#212529] font-semibold xl:mb-7 xl:text-2xl lg:text-xl md:text-lg md:mb-4">
             CONTACT US
           </h3>
@@ -104,7 +104,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="mb-6 sm:mb-0 min-w-[150px]">
           <h3 className="text-[#212529] font-semibold xl:mb-7 xl:text-2xl lg:text-xl md:text-lg md:mb-4">
             Gallery
           </h3>
@@ -122,31 +122,33 @@ export default function Footer() {
           </Link>
         </div>
 
-        <div>
+        <div className="mb-6 sm:mb-0 min-w-[150px]">
           <h3 className="text-[#212529] mx-auto font-semibold xl:mb-8 xl:text-2xl lg:text-xl md:text-lg md:mb-4">
             Mobile App
           </h3>
 
           <Link href={"#"}>
-            <button className="flex items-center justify-center box-border bg-lime-300 text-white rounded xl:w-32 xl:h-15 xl:mb-5 lg:mb-4 md:w-24 md:h-11 md:mb-3">
-              <TiVendorAndroid className="xl:text-5xl lg:text-4xl md:text-3xl" />
-              <span className="px-1 xl:text-xl lg:text-[15px] md:text-sm">
+            <button className="flex items-center justify-center box-border bg-lime-300 text-white rounded w-24 h-10 sm:w-28 sm:h-12 md:w-32 md:h-14 xl:w-36 xl:h-16 mb-3 sm:mb-4 xl:mb-5">
+              <TiVendorAndroid className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl" />
+              <span className="px-1 text-sm sm:text-base md:text-lg xl:text-xl">
                 Android
               </span>
             </button>
           </Link>
           <Link href={"#"}>
-            <button className="flex items-center justify-center box-border gap-1 bg-black text-white md:rounded xl:w-32 xl:h-15 md:w-24 md:h-11 md:mb-3">
-              <FaApple className="xl:text-4xl lg:text-3xl md:text-2xl" />
-              <span className="px-1 xl:text-xl md:text-[16px]">iOS</span>
+            <button className="flex items-center justify-center box-border gap-1 bg-black text-white rounded w-24 h-10 sm:w-28 sm:h-12 md:w-32 md:h-14 xl:w-36 xl:h-16 mb-3 sm:mb-4 xl:mb-5">
+              <FaApple className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl" />
+              <span className="px-1 text-sm sm:text-base md:text-lg xl:text-xl">
+                iOS
+              </span>
             </button>
           </Link>
         </div>
       </section>
 
       {/* Footer Section */}
-      <section className="bg-linear-to-r from-[#3fb6bc] to-[#69e59b]">
-        <div className="text-white text-center font-semibold xl:py-4 xl:text-sm lg:py-3.5 lg:text-xs md:py-2 md:text-[11px]">
+      <section className="bg-gradient-to-r from-[#3fb6bc] to-[#69e59b]">
+        <div className="text-white text-center font-semibold py-2 sm:py-3 md:py-4 xl:py-5 text-xs sm:text-sm md:text-base xl:text-lg">
           Copyright © Pacific Global School 2020 | All Rights Reserved | Terms
           and Conditions | Privacy Policy
         </div>

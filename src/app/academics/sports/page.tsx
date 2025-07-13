@@ -42,7 +42,7 @@ export default function Sports() {
 
   return (
     <div
-      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-700 text-justify`}
+      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-700 text-justify min-h-screen`}
     >
       {/* Header Section */}
       <header>
@@ -52,7 +52,7 @@ export default function Sports() {
 
       {/* Sports Page Background image */}
       <Image
-        className="w-full"
+        className="w-full h-40 sm:h-64 md:h-80 lg:h-96 object-cover"
         src={
           "https://blog.globalindianschool.org/hubfs/ITGF%202017/ITGF-sack%20race.jpg"
         }
@@ -62,7 +62,7 @@ export default function Sports() {
       />
 
       {/* Sports Section */}
-      <main className="relative flex divide-x-1">
+      <main className="relative flex flex-col md:flex-row divide-x-0 md:divide-x-1">
         {/* Fixed Sidebar Section */}
         <div className="sticky top-10 divide-gray-300 bg-[#f8f6f6] xl:pt-15 lg:pt-13 md:pt-10 md:min-w-[22.5%]">
           {/* Scrollable Area */}
@@ -107,7 +107,7 @@ export default function Sports() {
         </div>
 
         {/* Main Content */}
-        <div className="xl:mx-10 lg:mx-8.5 md:mx-7">
+        <div className="mx-2 sm:mx-4 md:mx-7 lg:mx-8.5 xl:mx-10">
           {/* House Section */}
           <section id="houses">
             <div>
@@ -151,8 +151,8 @@ export default function Sports() {
                 duration={1000}
                 delay={300}
               >
-                <div className="flex xl:gap-5 md:gap-3">
-                  <div className="w-1/4 border shadow-xl text-white rounded-lg xl:py-5 lg:py-4 md:py-3 bg-red-700">
+                <div className="flex flex-col md:flex-row xl:gap-5 md:gap-3 gap-2">
+                  <div className="w-full md:w-1/4 border shadow-xl text-white rounded-lg py-2 md:py-3 lg:py-4 xl:py-5 bg-red-700 mb-2 md:mb-0">
                     <h4 className="font-bold xl:tracking-wider xl:px-5 xl:pb-2 xl:text-lg lg:px-4 lg:pb-1.5 lg:text-[16px] md:px-3 md:pb-1 md:text-sm text-center">
                       Red House
                     </h4>
@@ -163,7 +163,7 @@ export default function Sports() {
                       numquam, sequi, cupiditate quaerat?
                     </p>
                   </div>
-                  <div className="w-1/4 border shadow-xl text-white rounded-lg xl:py-5 lg:py-4 md:py-3 bg-green-700">
+                  <div className="w-full md:w-1/4 border shadow-xl text-white rounded-lg py-2 md:py-3 lg:py-4 xl:py-5 bg-green-700 mb-2 md:mb-0">
                     <h4 className="font-bold xl:tracking-wider xl:px-5 xl:pb-2 xl:text-lg lg:px-4 lg:pb-1.5 lg:text-[16px] md:px-3 md:pb-1 md:text-sm text-center">
                       Green House
                     </h4>
@@ -174,7 +174,7 @@ export default function Sports() {
                       numquam, sequi, cupiditate quaerat?
                     </p>
                   </div>
-                  <div className="w-1/4 border shadow-xl text-white rounded-lg xl:py-5 lg:py-4 md:py-3 bg-blue-700">
+                  <div className="w-full md:w-1/4 border shadow-xl text-white rounded-lg py-2 md:py-3 lg:py-4 xl:py-5 bg-blue-700 mb-2 md:mb-0">
                     <h4 className="font-bold xl:tracking-wider xl:px-5 xl:pb-2 xl:text-lg lg:px-4 lg:pb-1.5 lg:text-[16px] md:px-3 md:pb-1 md:text-sm text-center">
                       Blue House
                     </h4>
@@ -185,7 +185,7 @@ export default function Sports() {
                       numquam, sequi, cupiditate quaerat?
                     </p>
                   </div>
-                  <div className="w-1/4 border shadow-xl text-white rounded-lg xl:py-5 lg:py-4 md:py-3 bg-yellow-700">
+                  <div className="w-full md:w-1/4 border shadow-xl text-white rounded-lg py-2 md:py-3 lg:py-4 xl:py-5 bg-yellow-700">
                     <h4 className="font-bold xl:tracking-wider xl:px-5 xl:pb-2 xl:text-lg lg:px-4 lg:pb-1.5 lg:text-[16px] md:px-3 md:pb-1 md:text-sm text-center">
                       Yellow House
                     </h4>
@@ -246,8 +246,8 @@ export default function Sports() {
                 duration={1000}
                 delay={300}
               >
-                <div className="flex justify-between xl:mt-3.5 xl:gap-5 lg:mt-3 lg:gap-4 md:gap-3 md:mt-2.5">
-                  <div className="border rounded shadow-lg xl:px-5 xl:py-4 lg:px-4 lg:py-3 md:px-3 md:py-2">
+                <div className="flex flex-col md:flex-row justify-between gap-2 xl:mt-3.5 xl:gap-5 lg:mt-3 lg:gap-4 md:gap-3 md:mt-2.5">
+                  <div className="border rounded shadow-lg px-2 md:px-3 lg:px-4 xl:px-5 py-2 md:py-2 lg:py-3 xl:py-4 mb-2 md:mb-0">
                     <h3 className="font-sem rounded-b-lgibold xl:text-lg lg:text-[16px] lg:tracking-normal md:text-sm md:tracking-tighter">
                       Sports Competitions:
                     </h3>
@@ -257,7 +257,7 @@ export default function Sports() {
                       debitis deleniti voluptatibus porro?
                     </p>
                   </div>
-                  <div className="border rounded shadow-lg xl:px-5 xl:py-4 lg:px-4 lg:py-3 md:px-3 md:py-2">
+                  <div className="border rounded shadow-lg px-2 md:px-3 lg:px-4 xl:px-5 py-2 md:py-2 lg:py-3 xl:py-4 mb-2 md:mb-0">
                     <h3 className="font-sem rounded-b-lgibold xl:text-lg lg:text-[16px] lg:tracking-normal md:text-sm md:tracking-tighter">
                       Academic Challenges:
                     </h3>
@@ -267,7 +267,7 @@ export default function Sports() {
                       debitis deleniti voluptatibus porro?
                     </p>
                   </div>
-                  <div className="border rounded shadow-lg xl:px-5 xl:py-4 lg:px-4 lg:py-3 md:px-3 md:py-2">
+                  <div className="border rounded shadow-lg px-2 md:px-3 lg:px-4 xl:px-5 py-2 md:py-2 lg:py-3 xl:py-4">
                     <h3 className="font-sem rounded-b-lgibold xl:text-lg lg:text-[16px] lg:tracking-normal md:text-sm md:tracking-tighter">
                       Cultural Events:
                     </h3>
@@ -756,8 +756,8 @@ export default function Sports() {
 
             <Fade direction="up" triggerOnce={true} duration={1000} delay={300}>
               <div>
-                <div className="flex justify-center xl:mt-10 xl:mx-7 xl:gap-6 lg:mt-8 lg:mx-6 lg:gap-5 md:mt-6 md:mx-5 md:gap-4">
-                  <div className="flex flex-col xl:w-[47.65%] xl:gap-6 lg:w-[47.4%] lg:gap-5 md:w-[47.3%] md:gap-4">
+                <div className="flex flex-col md:flex-row justify-center gap-2 xl:mt-10 xl:mx-7 xl:gap-6 lg:mt-8 lg:mx-6 lg:gap-5 md:mt-6 md:mx-5 md:gap-4">
+                  <div className="flex flex-col w-full md:w-[47.3%] lg:w-[47.4%] xl:w-[47.65%] gap-2 md:gap-4 lg:gap-5 xl:gap-6">
                     <Image
                       src={ImageOne}
                       alt="Image One"
@@ -773,7 +773,7 @@ export default function Sports() {
                       className="border shadow-lg xl:rounded-xl lg:rounded-lg md:rounded-md"
                     />
                   </div>
-                  <div className="w-[55%]">
+                  <div className="w-full md:w-[55%] mt-2 md:mt-0">
                     <Image
                       src={ImageThree}
                       alt="Image Three"
@@ -804,8 +804,8 @@ export default function Sports() {
                 duration={1000}
                 delay={300}
               >
-                <div className="flex flex-wrap justify-between xl:mt-7 lg:mt-5 md:mt-3">
-                  <div className="aspect-square text-center font-bold w-[22.5%] xl:mb-7 lg:mb-5.5 md:mb-4 md:tracking-wide">
+                <div className="flex flex-wrap justify-between gap-2 xl:mt-7 lg:mt-5 md:mt-3">
+                  <div className="aspect-square text-center font-bold w-[48%] sm:w-[30%] md:w-[22.5%] mb-2 xl:mb-7 lg:mb-5.5 md:mb-4 md:tracking-wide">
                     <Image
                       src={
                         "https://img.freepik.com/free-photo/portrait-athlete-competing-olympic-games-tournament_23-2151470889.jpg?t=st=1744271437~exp=1744275037~hmac=0921201c6c3c3f1e57b4d7cd8a584f4bd01fc78994935ba1a336af40df097fc0&w=740"
@@ -815,7 +815,7 @@ export default function Sports() {
                       width={1000}
                       className="shadow-xl xl:rounded-lg md:rounded-md"
                     />
-                    <h3 className="relative text-white bg-[#083342] xl:rounded-b-lg xl:-mt-6 xl:text-[16px] lg:-mt-4.5 lg:text-[13px] md:rounded-b-md md:-mt-4 md:text-[11px]">
+                    <h3 className="relative text-white bg-[#083342] rounded-b-lg -mt-4 text-xs sm:text-sm md:text-[11px] lg:text-[13px] xl:text-[16px]">
                       Taekwondo
                     </h3>
                   </div>

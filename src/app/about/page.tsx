@@ -19,10 +19,10 @@ const lexend = Lexend({
 export default function About() {
   return (
     <div
-      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify`}
+      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify min-h-screen`}
     >
       {/* Header */}
-      <header>
+      <header className="sticky top-0 z-50 w-full">
         <StickyHeader />
         <StickyHeaderTwo />
       </header>
@@ -30,14 +30,14 @@ export default function About() {
       {/* Admission Enquiry button position is fixed */}
       <Link
         href="/admission_enquiry"
-        className="fixed rotate-90 top-72 -left-[77px] text-xs animate-pulse flex items-center bg-red-700 text-white px-3 py-1 font-light rounded-t-xl border border-white cursor-pointer z-99"
+        className="fixed rotate-90 top-72 -left-[77px] text-xs animate-pulse flex items-center bg-red-700 text-white px-3 py-1 font-light rounded-t-xl border border-white cursor-pointer z-50 md:top-72 md:-left-[77px] sm:top-32 sm:-left-[60px] lg:top-80 lg:-left-[90px] xl:top-96 xl:-left-[100px]"
       >
         ADMISSION ENQUIRY <FiArrowUpRight className="text-lg" />
       </Link>
 
       {/* About Background image */}
       <Image
-        className="w-full"
+        className="w-full h-40 sm:h-64 md:h-80 lg:h-96 object-cover"
         src={
           "https://img.freepik.com/premium-photo/kids-school-zest_1260728-28217.jpg?w=826"
         }
@@ -47,14 +47,14 @@ export default function About() {
       />
 
       {/* About Description */}
-      <section className="mx-8 xl:py-16 lg:py-10 md:py-10">
+      <section className="mx-2 sm:mx-4 md:mx-8 xl:py-16 lg:py-10 md:py-10 py-4">
         <Fade direction="down" triggerOnce={true}>
-          <h1 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl">
+          <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             About <span className="text-[#1B6B8F] font-bold">Us</span>
           </h1>
         </Fade>
-        <div className="flex justify-between items-center xl:mt-5 xl:gap-14 lg:mt-4 lg:gap-10 md:mt-2 md:gap-8">
-          <p className="xl:w-[55%] xl:text-[17px] xl:h-full lg:w-[55%] md:w-[60%] lg:text-sm lg:h-80 lg:overflow-y-auto md:text-xs md:h-48 md:overflow-y-auto">
+        <div className="flex flex-col md:flex-row justify-between items-center xl:mt-5 xl:gap-14 lg:mt-4 lg:gap-10 md:mt-2 md:gap-8 gap-4">
+          <p className="w-full md:w-[60%] xl:w-[55%] text-xs sm:text-sm md:text-base xl:text-[17px] h-auto md:h-48 lg:h-80 xl:h-full overflow-y-auto">
             Atlantic Global School is built on the strong foundation of the
             Pacific Group, the esteemed promoters of Delhi Public School
             Indirapuram (established in 2003) and Delhi Public School Raj Nagar
@@ -80,11 +80,11 @@ export default function About() {
           <Fade
             direction="right"
             triggerOnce={true}
-            className="xl:w-[45%] lg:w-[45%] md:w-[40%]"
+            className="w-full md:w-[40%] lg:w-[45%] xl:w-[45%]"
           >
-            <div className="relative bg-gradient-to-b from-blue-500 to-yellow-400 xl:py-7 xl:pr-7 lg:py-5 lg:pr-5 md:py-3 md:pr-3">
+            <div className="relative bg-gradient-to-b from-blue-500 to-yellow-400 py-2 sm:py-3 md:py-3 xl:py-7 pr-2 sm:pr-3 md:pr-3 xl:pr-7">
               <Image
-                className="w-full h-auto xl:py-1 xl:pr-1 lg:py-1 lg:pr-1 md:py-0.5 md:pr-0.5 bg-white"
+                className="w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover bg-white"
                 src={
                   "https://img.freepik.com/premium-photo/group-diverse-kids-studio-portrait_53876-79141.jpg?w=1060"
                 }
@@ -92,21 +92,21 @@ export default function About() {
                 width={1000}
                 height={1000}
               />
-              <span className="absolute w-[40%] h-full border-white py-1 pl-1 top-0 left-0 xl:border-y-28 lg:border-y-20 md:border-y-12"></span>
+              <span className="absolute w-[40%] h-full border-white py-1 pl-1 top-0 left-0"></span>
             </div>
           </Fade>
         </div>
       </section>
 
       {/* Moto Section */}
-      <section className="flex justify-between items-center xl:mx-18 xl:gap-30 xl:py-16 lg:mx-16 lg:gap-18 lg:py-10 md:mx-10 md:gap-14 md:py-10">
+      <section className="flex flex-col md:flex-row justify-between items-center mx-2 sm:mx-4 md:mx-10 lg:mx-16 xl:mx-18 gap-4 md:gap-14 lg:gap-18 xl:gap-30 py-4 md:py-10 lg:py-10 xl:py-16">
         <Fade
           direction="left"
           triggerOnce={true}
-          className="xl:w-[50%] lg:w-[45%] md:w-[48%]"
+          className="w-full md:w-[48%] lg:w-[45%] xl:w-[50%]"
         >
           <Image
-            className="shadow-2xl md:w-full"
+            className="shadow-2xl w-full h-32 sm:h-40 md:h-56 lg:h-72 xl:h-auto object-cover"
             src={
               "https://img.freepik.com/free-vector/kids-teacher-poster_1284-12408.jpg?t=st=1743672786~exp=1743676386~hmac=7cb991835cafcce517ecac83d2142339684b5356e5006610f651dae56bbc4f53&w=740"
             }
@@ -115,20 +115,20 @@ export default function About() {
             height={1000}
           />
         </Fade>
-        <div className="xl:w-[50%] lg:w-[55%] md:w-[52%]">
+        <div className="w-full md:w-[52%] lg:w-[55%] xl:w-[50%]">
           <Fade direction="up" triggerOnce={true}>
-            <h2 className="xl:text-xl lg:text-[16px] lg:mb-7 md:font-bold md:text-sm md:mb-4">
+            <h2 className="text-xs sm:text-sm md:text-base lg:text-[16px] xl:text-xl mb-2 lg:mb-7 md:font-bold md:mb-4">
               The school&apos;s motto, mission, and core values reflect a deep
               commitment to positive initiatives and kindness toward all beings,
               big and small.
             </h2>
           </Fade>
-          <h3 className="xl:text-[16px] lg:text-sm lg:mb-4 md:font-bold md:text-xs md:mb-2">
+          <h3 className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] mb-1 lg:mb-4 md:font-bold md:mb-2">
             The school&apos;s motto, mission, and core values reflect a deep
             commitment to positive initiatives and kindness toward all beings,
             big and small.
           </h3>
-          <p className="xl:text-[16px] xl:h-full lg:text-sm lg:h-75 lg:overflow-y-auto md:text-xs md:h-60 md:overflow-y-auto">
+          <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] h-auto md:h-60 lg:h-75 xl:h-full overflow-y-auto">
             At Atlantic Global School, we strive to create a dynamic learning
             environment that extends beyond the classroom, offering diverse
             opportunities for holistic growth. Our institution has become the
@@ -156,13 +156,13 @@ export default function About() {
       </section>
 
       {/* Emblem Section */}
-      <section className="flex w-full h-[20%] md:gap-5 md:py-8 md:px-8 bg-green-600">
-        <div className="lg:w-[50%] md:w-[40%]">
+      <section className="flex flex-col md:flex-row w-full h-auto md:gap-5 py-4 md:py-8 px-2 md:px-8 bg-green-600 gap-4">
+        <div className="w-full md:w-[40%] lg:w-[50%]">
           <Fade direction="left" triggerOnce={true}>
-            <h2 className="font-bold text-white xl:text-3xl lg:text-2xl md:text-xl md:mb-3">
+            <h2 className="font-bold text-white text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mb-2 md:mb-3">
               Our Emblem
             </h2>
-            <p className="text-white xl:text-[16px] lg:text-sm md:text-xs">
+            <p className="text-white text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px]">
               The school&apos;s logo is a powerful representation of its vision
               and values. Designed in the form of a sacred mark traditionally
               worn on the forehead, it symbolizes the institution&apos;s
@@ -182,15 +182,15 @@ export default function About() {
           </Fade>
         </div>
 
-        <div className="flex  lg:w-[50%] md:w-[60%] md:gap-1">
-          <div className="w-full h-full shadow-xl bg-white xl:px-5 xl:py-4 lg:px-4 lg:py-3 md:px-3 md:py-2 lg:rounded-lg md:max-w-[50%] md:rounded">
+        <div className="flex flex-col md:flex-row w-full md:w-[60%] lg:w-[50%] gap-2 md:gap-1">
+          <div className="w-full h-full shadow-xl bg-white px-2 py-2 sm:px-3 sm:py-2 md:px-3 md:py-2 lg:px-4 lg:py-3 xl:px-5 xl:py-4 rounded-lg md:max-w-[50%]">
             <Fade direction="up" triggerOnce={true}>
-              <h3 className="font-bold xl:text-xl lg:text-lg lg:mb-3.5 md:mb-4">
+              <h3 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-1 lg:mb-3.5 md:mb-4">
                 Our Mission
               </h3>
               <div className="relative h-full overflow-hidden">
                 <div className="marquee-vertical-mission">
-                  <p className="xl:text-[16px] lg:text-sm md:text-xs">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px]">
                     Pacific World School aspires to be a premier hub of
                     educational excellence, dedicated to the holistic
                     development of the mind, body, and soul while nurturing
@@ -201,14 +201,14 @@ export default function About() {
             </Fade>
           </div>
 
-          <div className="w-full h-full shadow-xl bg-white xl:px-5 xl:py-4 lg:px-4 lg:py-3 md:px-3 md:py-2 lg:rounded-lg md:max-w-[50%] md:rounded">
+          <div className="w-full h-full shadow-xl bg-white px-2 py-2 sm:px-3 sm:py-2 md:px-3 md:py-2 lg:px-4 lg:py-3 xl:px-5 xl:py-4 rounded-lg md:max-w-[50%]">
             <Fade direction="up" triggerOnce={true}>
-              <h3 className="font-bold xl:text-xl lg:text-lg lg:mb-3.5 md:mb-4">
+              <h3 className="font-bold text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl mb-1 lg:mb-3.5 md:mb-4">
                 Our Vision
               </h3>
               <div className="relative h-full overflow-hidden">
                 <div className="marquee-vertical-vision">
-                  <p className="xl:text-[16px] lg:text-sm md:text-xs">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px]">
                     We aspire… therefore, we achieve! At Pacific World School,
                     we are dedicated to delivering a high-quality education that
                     fosters a transformative learning experience for every

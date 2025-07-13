@@ -26,9 +26,9 @@ export default function RightSideDrawer() {
     <div>
       <Button
         onClick={() => setIsOpen(true)}
-        className="box-border bg-blue-500 hover:bg-blue-600 rounded xl:w-11 xl:h-9 xl:-mr-6 lg:w-10 lg:h-7 lg:-mr-4 md:-mr-2 md:w-8 md:h-6"
+        className="box-border bg-blue-500 hover:bg-blue-600 rounded w-10 h-7 sm:w-10 sm:h-7 md:w-10 md:h-7 lg:w-10 lg:h-7 xl:w-11 xl:h-9 mr-0 sm:-mr-3 md:-mr-1 lg:-mr-4 xl:-mr-6 flex items-center justify-center"
       >
-        <GiHamburgerMenu />
+        <GiHamburgerMenu className="text-base sm:text-lg md:text-xl" />
       </Button>
 
       <motion.div
@@ -36,15 +36,15 @@ export default function RightSideDrawer() {
         animate={{ x: isOpen ? "0%" : "100%" }}
         exit={{ x: "100%" }}
         transition={{ type: "spring", stiffness: 300, damping: 30 }}
-        className="fixed top-0 right-0 h-screen bg-[#000000ab] overflow-y-auto w-80 p-2 pt-4 z-50"
+        className="fixed top-0 right-0 h-screen bg-[#000000ab] overflow-y-auto w-64 sm:w-72 md:w-80 lg:w-96 xl:w-[28rem] p-2 sm:p-3 md:p-4 pt-4 z-50"
       >
         <button
           onClick={() => setIsOpen(false)}
-          className="absolute border rounded text-white xl:top-2.5 xl:right-6 xl:py-1 xl:px-2.5 lg:top-2.5 lg:right-4 lg:px-[7px] lg:py-[1px] md:top-1.5 md:right-4 md:py-0 md:px-0.5"
+          className="absolute border rounded text-white top-2 right-1.5 py-0.5 px-2 sm:top-2 sm:right-4 sm:py-1 sm:px-2 md:top-1 md:right-2 md:py-0.5 md:px-2 lg:top-2.5 lg:right-4 lg:py-0.5 xl:top-2.5 xl:right-6"
         >
-          <X size={24} />
+          <X size={22} className="sm:size-6" />
         </button>
-        <ul className="mt-10 text-sm text-white">
+        <ul className="mt-8 sm:mt-10 text-xs sm:text-sm md:text-base text-white">
           <li>
             <Link
               href="/"

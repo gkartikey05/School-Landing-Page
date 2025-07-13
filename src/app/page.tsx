@@ -109,7 +109,7 @@ export default function Home() {
   return (
     <div className={`${lexend.className} overflow-x-hidden scroll-smooth`}>
       {/* Header */}
-      <header>
+      <header className="sticky top-0 z-50">
         <StickyHeader />
         <StickyHeaderTwo />
       </header>
@@ -117,18 +117,20 @@ export default function Home() {
       {/* Admission Enquiry button position is fixed */}
       <Link
         href="/admission_enquiry"
-        className="fixed rotate-90 top-72 -left-[77px] text-xs animate-pulse flex items-center bg-red-700 text-white px-3 py-1 font-light rounded-t-xl border border-white cursor-pointer z-99"
+        className="fixed rotate-90 top-72 -left-[77px] text-xs animate-pulse flex items-center bg-red-700 text-white px-3 py-1 font-light rounded-t-xl border border-white cursor-pointer z-50 md:top-72 md:-left-[77px] sm:top-32 sm:-left-[60px]"
       >
         ADMISSION ENQUIRY <FiArrowUpRight className="text-lg" />
       </Link>
 
       {/* Background Video */}
-      <main className="flex justify-center items-center bg-black">
-        <VideoPlayer src="/assets/videos/background_video.mp4" />
+      <main className="flex justify-center items-center bg-black mt-10 sm:mt-0 h-[180px] sm:h-[220px] md:h-[500px] lg:h-[700px] w-full">
+        <div className="w-full h-full flex justify-center items-center">
+          <VideoPlayer src="/assets/videos/background_video.mp4" />
+        </div>
       </main>
 
       {/* Newsletter */}
-      <section className="bg-blue-500 font-bold text-white overflow-hidden lg:text-sm">
+      <section className="bg-blue-500 font-bold text-white overflow-hidden text-xs md:text-sm">
         <motion.div
           className="py-3 text-white lg:py-2"
           initial={{ x: "100%" }}
@@ -136,15 +138,18 @@ export default function Home() {
           transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
         >
           <span className="border-l-4 border-r-4 border-yellow-400 font-[700] pl-8 pr-8">
-            This Website is underdevelopment, please try to coperate. Thank You
+            Welcome to Altantic World School
           </span>
         </motion.div>
       </section>
 
       {/* Principle Section */}
-      <section id="moto" className="relative h-screen pt-20 w-full text-center">
+      <section
+        id="moto"
+        className="relative min-h-[500px] md:h-screen pt-20 w-full text-center"
+      >
         <Fade direction="up" triggerOnce={true}>
-          <h2 className="text-center text-4xl font-semibold tracking-wider text-gray-800 mb-10 lg:text-3xl lg:tracking-normal">
+          <h2 className="text-center text-2xl md:text-4xl font-semibold tracking-wider text-gray-800 mb-6 md:mb-10 lg:text-3xl lg:tracking-normal">
             Our Principles! Perfection, Compassion, Encouragement
           </h2>
         </Fade>
@@ -158,32 +163,32 @@ export default function Home() {
                 align: "start",
                 loop: true,
               }}
-              className="max-w-[85%] w-full"
+              className="max-w-full w-full"
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/1">
+                <CarouselItem className="md:basis-1/2 lg:basis-1/1 sm:basis-full">
                   <div>
                     <Card>
-                      <CardContent className="flex items-center justify-between h-96 rounded-xl gap-2 bg-linear-to-b from-[#afcdff] to-[#fff]">
-                        <div className="w-[50%] py-52">
+                      <CardContent className="flex flex-col md:flex-row items-center justify-between h-auto md:h-96 rounded-xl gap-2 bg-linear-to-b from-[#afcdff] to-[#fff]">
+                        <div className="w-full md:w-[50%] py-10 md:py-52">
                           <h1
-                            className={`text-[#ff7f50] text-6xl py-5 ${ibmPlexSans.className} ${pacifico.className} lg:text-5xl`}
+                            className={`text-[#ff7f50] text-3xl md:text-6xl py-2 md:py-5 ${ibmPlexSans.className} ${pacifico.className} lg:text-5xl`}
                           >
                             Perfection
                           </h1>
-                          <p className="text-lg px-20 font-semibold tracking-wide lg:text-[14px] lg:px-10 lg:tracking-normal">
+                          <p className="text-base md:text-lg px-4 md:px-20 font-semibold tracking-wide lg:text-[14px] lg:px-10 lg:tracking-normal">
                             &quot;We pursue mastery, motivating every student to
                             attain their utmost potential and uphold the finest
                             standards in all their efforts.&quot;
                           </p>
                         </div>
-                        <span className="w-[50%] flex justify-end">
+                        <span className="w-full md:w-[50%] flex justify-end">
                           <Image
-                            className="rounded-xl h-96"
+                            className="rounded-xl h-48 md:h-96 object-cover"
                             src="https://img.freepik.com/free-photo/young-kids-performing-play-theatre-stage-celebrate-Global-theatre-day_23-2151163672.jpg?t=st=1743492301~exp=1743495901~hmac=3dc81ac9d7728b7f89255485cfcdab3da763c83ec21a1a0e9ec9d06374c74389&w=740"
                             alt="images"
-                            width="600"
-                            height="400"
+                            width={600}
+                            height={400}
                           />
                         </span>
                       </CardContent>
@@ -191,30 +196,30 @@ export default function Home() {
                   </div>
                 </CarouselItem>
 
-                <CarouselItem className="md:basis-1/2 lg:basis-1/1">
+                <CarouselItem className="md:basis-1/2 lg:basis-1/1 sm:basis-full">
                   <div className="p-1">
                     <Card className="p-0">
-                      <CardContent className="flex items-center justify-between h-96 rounded-xl gap-2 bg-linear-to-b from-[#afcdff] to-[#fff] p-0">
-                        <div className="w-[50%] py-52">
+                      <CardContent className="flex flex-col md:flex-row items-center justify-between h-auto md:h-96 rounded-xl gap-2 bg-linear-to-b from-[#afcdff] to-[#fff] p-0">
+                        <div className="w-full md:w-[50%] py-10 md:py-52">
                           <h1
-                            className={`text-[#ff7f50] text-6xl py-5 ${ibmPlexSans.className} ${pacifico.className} lg:text-5xl`}
+                            className={`text-[#ff7f50] text-3xl md:text-6xl py-2 md:py-5 ${ibmPlexSans.className} ${pacifico.className} lg:text-5xl`}
                           >
                             Compassion
                           </h1>
-                          <p className="text-lg px-20 font-semibold tracking-wide lg:text-[14px] lg:px-10 lg:tracking-normal">
+                          <p className="text-base md:text-lg px-4 md:px-20 font-semibold tracking-wide lg:text-[14px] lg:px-10 lg:tracking-normal">
                             &quot;At Atlantic Global School, we cultivate young
                             intellects by encouraging discovery, innovation, and
                             wisdom, fostering self-assurance, kindness, and a
                             promising future.&quot;
                           </p>
                         </div>
-                        <span className="w-[50%] flex justify-end">
+                        <span className="w-full md:w-[50%] flex justify-end">
                           <Image
-                            className="rounded-xl h-96"
+                            className="rounded-xl h-48 md:h-96 object-cover"
                             src="https://img.freepik.com/free-photo/young-kids-performing-play-theatre-stage-celebrate-Global-theatre-day_23-2151163734.jpg?t=st=1743492272~exp=1743495872~hmac=0cc2a993d4db2c80207793b46627a3678201ebece21fc4f12154d41dcbcf1d0e&w=740"
                             alt="images"
-                            width="600"
-                            height="400"
+                            width={600}
+                            height={400}
                           />
                         </span>
                       </CardContent>
@@ -222,29 +227,29 @@ export default function Home() {
                   </div>
                 </CarouselItem>
 
-                <CarouselItem className="md:basis-1/2 lg:basis-1/1">
+                <CarouselItem className="md:basis-1/2 lg:basis-1/1 sm:basis-full">
                   <div className="p-1">
                     <Card className="p-0">
-                      <CardContent className="flex items-center justify-between h-96 rounded-xl gap-2 bg-linear-to-b from-[#afcdff] to-[#fff] p-0">
-                        <div className="w-[50%] py-52">
+                      <CardContent className="flex flex-col md:flex-row items-center justify-between h-auto md:h-96 rounded-xl gap-2 bg-linear-to-b from-[#afcdff] to-[#fff] p-0">
+                        <div className="w-full md:w-[50%] py-10 md:py-52">
                           <h1
-                            className={`text-[#ff7f50] text-6xl py-5 ${ibmPlexSans.className} ${pacifico.className} lg:text-5xl`}
+                            className={`text-[#ff7f50] text-3xl md:text-6xl py-2 md:py-5 ${ibmPlexSans.className} ${pacifico.className} lg:text-5xl`}
                           >
                             Encouragement
                           </h1>
-                          <p className="text-lg px-20 font-semibold tracking-wide lg:text-[14px] lg:px-10 lg:tracking-normal">
+                          <p className="text-base md:text-lg px-4 md:px-20 font-semibold tracking-wide lg:text-[14px] lg:px-10 lg:tracking-normal">
                             &quot;We equip students with the confidence and
                             independence to lead and shape their own
-                            future..&quot;
+                            future.&quot;
                           </p>
                         </div>
-                        <span className="w-[50%] flex justify-end">
+                        <span className="w-full md:w-[50%] flex justify-end">
                           <Image
-                            className="rounded-xl h-96"
+                            className="rounded-xl h-48 md:h-96 object-cover"
                             src="https://img.freepik.com/free-photo/kids-performing-play-stage-word-theatre-day_23-2151163757.jpg?t=st=1743492232~exp=1743495832~hmac=f710ac1c9e01e6ffdd24e21e6e394186e7569a3e93dddaf879726e057c490f7f&w=740"
                             alt="images"
-                            width="600"
-                            height="400"
+                            width={600}
+                            height={400}
                           />
                         </span>
                       </CardContent>
@@ -260,13 +265,13 @@ export default function Home() {
         <div className="flex justify-center items-center gap-2">
           <span
             onClick={() => apiOne?.scrollTo(currentOne - 1)}
-            className="absolute left-14 top-80 bg-blue-500 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer lg:left-9"
+            className="absolute left-2 md:left-14 top-40 md:top-80 bg-blue-500 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowLeftLong className="text-lg" />
           </span>
           <span
             onClick={() => apiOne?.scrollTo(currentOne + 1)}
-            className="absolute right-14 top-80 bg-blue-500 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer lg:right-9"
+            className="absolute right-2 md:right-14 top-40 md:top-80 bg-blue-500 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowRightLong className="text-lg" />
           </span>
@@ -276,10 +281,10 @@ export default function Home() {
       {/* Achievement Section */}
       <section
         id="achievement"
-        className={`relative h-screen pt-24 w-full text-center bg-[url("https://img.freepik.com/premium-vector/modern-minimalistic-soft-blue-white-gradient-color-abstract-background_1120863-1210.jpg?w=1380")] animate__animated animate__fadeInUp`}
+        className={`relative min-h-[500px] md:h-screen pt-12 md:pt-24 w-full text-center bg-[url('https://img.freepik.com/premium-vector/modern-minimalistic-soft-blue-white-gradient-color-abstract-background_1120863-1210.jpg?w=1380')] animate__animated animate__fadeInUp`}
       >
         <Fade direction="up" triggerOnce={true}>
-          <h2 className="text-4xl font-semibold tracking-wider text-gray-800 mb-10 animate__animated animate__fadeInUp">
+          <h2 className="text-2xl md:text-4xl font-semibold tracking-wider text-gray-800 mb-6 md:mb-10 animate__animated animate__fadeInUp">
             Our Achievements
           </h2>
         </Fade>
@@ -293,20 +298,20 @@ export default function Home() {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-6xl"
+              className="w-full max-w-full"
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                <CarouselItem className="md:basis-1/2 lg:basis-1/4 sm:basis-full">
                   <div className="p-1">
                     <Card>
-                      <CardContent className="flexitems-center justify-center p-0">
+                      <CardContent className="flex items-center justify-center p-0">
                         <span className="text-4xl font-semibold">
                           <Image
-                            className="text-4xl rounded-lg"
+                            className="text-4xl rounded-lg h-48 md:h-96 object-cover"
                             src="https://img.freepik.com/free-photo/best-friends-graduation-ceremony-having-fun_23-2148505279.jpg?t=st=1743231888~exp=1743235488~hmac=040ecb4c5765a6cc08fab83944c684cd69de4a944bb9625b5e3db99cbb598986&w=740"
                             alt="images"
-                            width="600"
-                            height="600"
+                            width={600}
+                            height={600}
                           />
                         </span>
                       </CardContent>
@@ -448,13 +453,13 @@ export default function Home() {
         <div className="flex justify-center items-center gap-2">
           <span
             onClick={() => apiTwo?.scrollTo(currentTwo - 1)}
-            className="absolute left-12 top-72 bg-blue-500 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
+            className="absolute left-2 md:left-12 top-32 md:top-72 bg-blue-500 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowLeftLong className="text-lg" />
           </span>
           <span
             onClick={() => apiTwo?.scrollTo(currentTwo + 1)}
-            className="absolute right-12 top-72 bg-blue-500 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
+            className="absolute right-2 md:right-12 top-32 md:top-72 bg-blue-500 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowRightLong className="text-lg" />
           </span>
@@ -464,10 +469,10 @@ export default function Home() {
       {/* Why Choose Us Section */}
       <section
         id="why_choose"
-        className={`h-screen pt-24 w-full text-center bg-[url('https://img.freepik.com/free-vector/dark-background-with-dynamic-shapes_361591-3105.jpg?t=st=1743492720~exp=1743496320~hmac=73aa589f4dc469315b32b45615bfe084f4945e97ac914b0d7f5cf684f6e27eff&w=826')] animate__animated animate__fadeInUp`}
+        className={`min-h-[500px] md:h-screen pt-12 md:pt-24 w-full text-center bg-[url('https://img.freepik.com/free-vector/dark-background-with-dynamic-shapes_361591-3105.jpg?t=st=1743492720~exp=1743496320~hmac=73aa589f4dc469315b32b45615bfe084f4945e97ac914b0d7f5cf684f6e27eff&w=826')] animate__animated animate__fadeInUp`}
       >
         <Fade direction="up" triggerOnce={true}>
-          <h2 className="text-center text-4xl font-bold tracking-wider text-white mb-10 animate__animated animate__fadeInUp">
+          <h2 className="text-center text-2xl md:text-4xl font-bold tracking-wider text-white mb-6 md:mb-10 animate__animated animate__fadeInUp">
             Why choose Atlantic Global School?
           </h2>
         </Fade>
@@ -481,10 +486,10 @@ export default function Home() {
                 align: "start",
                 loop: true,
               }}
-              className="max-w-[90%] w-full"
+              className="max-w-full w-full"
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/2 lg:basis-1/4">
+                <CarouselItem className="md:basis-1/2 lg:basis-1/4 sm:basis-full">
                   <div>
                     <Card>
                       <CardContent className="flex justify-center">
@@ -708,15 +713,15 @@ export default function Home() {
         <div className="flex justify-center items-center gap-2">
           <span
             onClick={() => apiThree?.scrollTo(currentThree - 1)}
-            className="absolute left-0 top-[310px]"
+            className="absolute left-2 md:left-0 top-40 md:top-[310px]"
           >
-            <RiArrowLeftSLine className="text-8xl text-blue-500 cursor-pointer" />
+            <RiArrowLeftSLine className="text-4xl md:text-8xl text-blue-500 cursor-pointer" />
           </span>
           <span
             onClick={() => apiThree?.scrollTo(currentThree + 1)}
-            className="absolute right-0 top-[310px]"
+            className="absolute right-2 md:right-0 top-40 md:top-[310px]"
           >
-            <RiArrowRightSLine className="text-8xl text-blue-500 cursor-pointer" />
+            <RiArrowRightSLine className="text-4xl md:text-8xl text-blue-500 cursor-pointer" />
           </span>
         </div>
       </section>
@@ -724,14 +729,14 @@ export default function Home() {
       {/* Video Gallery Section */}
       <section
         id="gallery"
-        className={`h-full px-[75px] pt-20 animate__animated animate__fadeInUp bg-[url("https://img.freepik.com/premium-photo/wallpaper-black-white-background-modern-backdrop-abstract-lines-abstract-fold-3d-illustration_357568-5250.jpg?w=1380")]`}
+        className={`h-full px-2 md:px-[75px] pt-10 md:pt-20 animate__animated animate__fadeInUp bg-[url('https://img.freepik.com/premium-photo/wallpaper-black-white-background-modern-backdrop-abstract-lines-abstract-fold-3d-illustration_357568-5250.jpg?w=1380')]`}
       >
         <Fade direction="up" triggerOnce={true}>
           <div className="pb-4">
-            <h2 className="text-[32px] font-bold tracking-wide -mb-1.5 text-[#333] animate__animated animate__fadeInDown">
+            <h2 className="text-xl md:text-[32px] font-bold tracking-wide -mb-1.5 text-[#333] animate__animated animate__fadeInDown">
               Our Video Catalog
             </h2>
-            <p className="text-[16px] text-[#333] mb-2.5 animate__animated animate__fadeInDown">
+            <p className="text-sm md:text-[16px] text-[#333] mb-2.5 animate__animated animate__fadeInDown">
               Dive into our expansive video gallery, where captivating content
               awaits you, blending inspiration with entertainment.
             </p>
@@ -750,20 +755,20 @@ export default function Home() {
               className="w-full max-w-full relative -mt-2 pb-4 "
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/3 lg:basis-1/3">
+                <CarouselItem className="md:basis-1/3 lg:basis-1/3 sm:basis-full">
                   <div className="mt-4">
                     <Card className="rounded-none">
                       <CardContent className="flex justify-center items-center bg-[#e6e6e6] h-1/2">
                         <span className="text-2xl text-left font-semibold">
                           <iframe
-                            width="380"
-                            height="250"
+                            width="100%"
+                            height="180"
                             src="https://www.youtube.com/embed/awKm7nu6J-g?si=ETUy_13UdPpEH-TC"
                             title="YouTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             className="w-full"
                           ></iframe>
-                          <h3 className="text-[16px] text-[#3f8dae] font-semibold text-left pt-4 ml-2">
+                          <h3 className="text-sm md:text-[16px] text-[#3f8dae] font-semibold text-left pt-2 md:pt-4 ml-2">
                             Our Premises
                           </h3>
                           <p className="text-xs text-left mt-0.5 mx-2 mb-2.5 hyphens-auto">
@@ -870,13 +875,13 @@ export default function Home() {
         <div className="flex justify-center items-center gap-2">
           <span
             onClick={() => apiFour?.scrollTo(currentFour - 1)}
-            className="absolute right-32 top-32 bg-blue-500 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
+            className="absolute right-2 md:right-32 top-10 md:top-32 bg-blue-500 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowLeftLong className="text-lg" />
           </span>
           <span
             onClick={() => apiFour?.scrollTo(currentFour + 1)}
-            className="absolute right-20 top-32 bg-blue-500 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
+            className="absolute right-10 md:right-20 top-10 md:top-32 bg-blue-500 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowRightLong className="text-lg" />
           </span>
@@ -885,13 +890,14 @@ export default function Home() {
         {/* Explore Button */}
         <Fade direction="up" triggerOnce={true}>
           <div className="text-center pb-5">
-            <button className="px-7 py-3 mb-16 bg-fuchsia-600 text-white rounded-full">
+            <button className="px-4 py-2 md:px-7 md:py-3 mb-8 md:mb-16 bg-fuchsia-600 text-white rounded-full text-xs md:text-base">
               <Link
                 href={"#"}
                 target="_blank"
                 className="flex items-center justify-center"
               >
-                EXPLORE OUR CHANNEL <FiArrowUpRight className="text-2xl" />
+                EXPLORE OUR CHANNEL{" "}
+                <FiArrowUpRight className="text-xl md:text-2xl" />
               </Link>
             </button>
           </div>
@@ -901,10 +907,10 @@ export default function Home() {
       {/* Testimonial Section */}
       <section
         id="testimonials"
-        className={`flex items-start justify-between relative gap-5 px-[90px] pt-20 bg-cyan-600 w-full max-h-[420px] text-center animate__animated animate__fadeInUp -mt-12 mb-48`}
+        className={`flex flex-col md:flex-row items-start justify-between relative gap-5 px-2 md:px-[90px] pt-10 md:pt-20 bg-cyan-600 w-full max-h-full md:max-h-[420px] text-center animate__animated animate__fadeInUp -mt-6 md:-mt-12 mb-24 md:mb-48`}
       >
-        <div className="w-3/6">
-          <h2 className="px-3 mb-12 text-[26px] font-bold text-left text-white">
+        <div className="w-full md:w-3/6">
+          <h2 className="px-3 mb-6 md:mb-12 text-xl md:text-[26px] font-bold text-left text-white">
             Parents Testimonials
           </h2>
           {/* 100% on small and larger screens. */}
@@ -918,21 +924,21 @@ export default function Home() {
               className="relative max-w-full mx-2"
             >
               <CarouselContent>
-                <CarouselItem className="md:basis-1/1 lg:basis-1/1">
+                <CarouselItem className="md:basis-1/1 lg:basis-1/1 sm:basis-full">
                   <div className="max-w-full w-full p-1">
                     <Card>
                       <CardContent className="bg-[#E9EAEC] rounded-2xl flex aspect-auto">
-                        <span className="w-full p-[50px] text-2xl text-left font-semibold ">
-                          <TbMessageCircle className="text-7xl text-blue-600" />
-                          <h3 className="py-3 text-[#333] text-[26px] font-bold ">
+                        <span className="w-full p-4 md:p-[50px] text-base md:text-2xl text-left font-semibold ">
+                          <TbMessageCircle className="text-3xl md:text-7xl text-blue-600" />
+                          <h3 className="py-2 md:py-3 text-[#333] text-lg md:text-[26px] font-bold ">
                             Great environment
                           </h3>
-                          <p className="text-[18px] text-[#333] pb-[20px]">
+                          <p className="text-xs md:text-[18px] text-[#333] pb-2 md:pb-[20px]">
                             Our experience in altantic Global school has been
                             exceptional. Teachers are truly invested in our
-                            child&apos;s education and his growth as a learner.
+                            child&#39;s education and his growth as a learner.
                           </p>
-                          <div className="text-[14px] mt-4">
+                          <div className="text-xs md:text-[14px] mt-2 md:mt-4">
                             Rabab Mehdi
                             <br />I H
                           </div>
@@ -1026,28 +1032,28 @@ export default function Home() {
         <div className="flex justify-center items-center gap-2">
           <span
             onClick={() => apiFive?.scrollTo(currentFive - 1)}
-            className="absolute left-16 top-[120px] bg-gray-400 text-gray-100 w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
+            className="absolute left-2 md:left-16 top-10 md:top-[120px] bg-gray-400 text-gray-100 w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowLeftLong className="text-lg" />
           </span>
           <span
             onClick={() => apiFive?.scrollTo(currentFive + 1)}
-            className="absolute left-28 top-[120px] bg-gray-400 text-white w-10 h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
+            className="absolute left-10 md:left-28 top-10 md:top-[120px] bg-gray-400 text-white w-8 h-8 md:w-10 md:h-10 box-border flex justify-center items-center rounded-full cursor-pointer"
           >
             <FaArrowRightLong className="text-lg" />
           </span>
         </div>
 
-        <div className="w-3/6 text-left pb-18">
-          <h2 className="px-3 mb-[42px] text-[26px] font-bold text-left text-white">
+        <div className="w-full md:w-3/6 text-left pb-8 md:pb-18 mt-8 md:mt-0">
+          <h2 className="px-3 mb-6 md:mb-[42px] text-xl md:text-[26px] font-bold text-left text-white">
             Upcoming Events/Calendar
           </h2>
 
-          <div className="bg-[#E9EAEC] rounded-lg max-h-[450px] h-[379px]">
+          <div className="bg-[#E9EAEC] rounded-lg max-h-full md:max-h-[450px] h-auto md:h-[379px]">
             <div className="relative mt-2 h-full overflow-hidden">
               <div className="marquee-vertical-events">
-                <div className="p-[40px] ">
-                  <div className="flex gap-1">
+                <div className="p-4 md:p-[40px] ">
+                  <div className="flex gap-1 mb-2">
                     <BsCalendar2Check className="min-h-5 min-w-5 h-5 w-5 text-blue-600 -mt-0.5" />
                     <span className="text-[300] text-sm pb-[20px]">
                       Parents can visit the school campus from Monday to
@@ -1056,7 +1062,7 @@ export default function Home() {
                       us at admission@pacificGlobalschool.com
                     </span>
                   </div>
-                  <div className="flex gap-1">
+                  <div className="flex gap-1 mb-2">
                     <BsCalendar2Check className="min-h-5 min-w-5 h-5 w-5 text-blue-600 -mt-0.5" />
                     <span className="text-[300] text-sm pb-[20px]">
                       Limited seats available for the session 2024-25.You can
@@ -1064,7 +1070,7 @@ export default function Home() {
                       admissions.
                     </span>
                   </div>
-                  <div className="flex gap-1 overflow-y-auto">
+                  <div className="flex gap-1 overflow-y-auto mb-2">
                     <BsCalendar2Check className="min-h-5 min-w-5 h-5 w-5 text-blue-600 -mt-0.5" />
                     <span className="text-[300] text-sm pb-[20px]">
                       Parents can visit the school campus from Monday to
@@ -1082,17 +1088,17 @@ export default function Home() {
 
       {/* Leadership Section */}
       <section
-        className={`bg-[url("https://img.freepik.com/free-photo/low-rise-building_1127-3268.jpg?t=st=1743406655~exp=1743410255~hmac=529afef574b2de6d106826d23a7667b9ece8df53f8694b2b65015114d0c528e9&w=996")] px-28 py-12 max-w-full bg-no-repeat bg-center bg-cover`}
+        className={`bg-[url('https://img.freepik.com/free-photo/low-rise-building_1127-3268.jpg?t=st=1743406655~exp=1743410255~hmac=529afef574b2de6d106826d23a7667b9ece8df53f8694b2b65015114d0c528e9&w=996')] px-4 md:px-28 py-8 md:py-12 max-w-full bg-no-repeat bg-center bg-cover`}
       >
         <Fade direction="down" triggerOnce={true}>
-          <h1 className="text-center mt-10 text-[36px] text-white font-[900] mb-2 ">
+          <h1 className="text-center mt-6 md:mt-10 text-2xl md:text-[36px] text-white font-[900] mb-2 ">
             Leadership Team
           </h1>
         </Fade>
 
         <Fade direction="up" triggerOnce={true}>
-          <div className="flex mt-6 bg-white">
-            <div className="flex flex-col items-center w-1/3 py-20 border-r border-gray-200">
+          <div className="flex flex-col md:flex-row mt-6 bg-white">
+            <div className="flex flex-col items-center w-full md:w-1/3 py-8 md:py-20 border-b md:border-b-0 md:border-r border-gray-200">
               <Image
                 className="rounded-full"
                 src={
@@ -1108,7 +1114,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center w-1/3 py-20 border-r border-gray-200">
+            <div className="flex flex-col items-center w-full md:w-1/3 py-8 md:py-20 border-b md:border-b-0 md:border-r border-gray-200">
               <Image
                 className="rounded-full"
                 src={
@@ -1124,7 +1130,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="flex flex-col items-center w-1/3 py-20 border-r border-gray-200">
+            <div className="flex flex-col items-center w-full md:w-1/3 py-8 md:py-20 border-b-0 md:border-r border-gray-200">
               <Image
                 className="rounded-full"
                 src={
@@ -1142,10 +1148,10 @@ export default function Home() {
           </div>
         </Fade>
 
-        <div className="text-center mt-16 mb-14 text-white font-extrabold">
+        <div className="text-center mt-8 md:mt-16 mb-8 md:mb-14 text-white font-extrabold">
           <Link
             href={"#"}
-            className="px-5 py-4 border-2 border-white rounded-full"
+            className="px-3 py-2 md:px-5 md:py-4 border-2 border-white rounded-full text-xs md:text-base"
           >
             VIEW OUR TEAM
           </Link>
@@ -1153,68 +1159,68 @@ export default function Home() {
       </section>
 
       {/* Partner Section */}
-      <section className="mx-6 py-16">
+      <section className="mx-2 md:mx-6 py-8 md:py-16">
         <Fade direction="down" triggerOnce={true}>
-          <h1 className="text-center text-[36px] text-gray-800 font-bold ">
+          <h1 className="text-center text-2xl md:text-[36px] text-gray-800 font-bold ">
             Our Education Partner
           </h1>
         </Fade>
 
         <Fade direction="up" triggerOnce={true}>
-          <div className="flex justify-between items-center mt-5">
+          <div className="flex flex-wrap justify-center md:justify-between items-center mt-5 gap-4">
             <Image
-              className="h-24 w-56 -mr-5"
+              className="h-16 md:h-24 w-32 md:w-56 -mr-2 md:-mr-5"
               alt=""
               src={
                 "https://w7.pngwing.com/pngs/480/214/png-transparent-stanford-university-logo-horizontal.png"
               }
-              width="250"
-              height="80"
+              width={250}
+              height={80}
             />
             <Image
-              className="h-44 w-46 -mr-5"
+              className="h-20 md:h-44 w-20 md:w-46 -mr-2 md:-mr-5"
               alt=""
               src={
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnwHwBZ67bOk67BI9bl6z_mNYlgfO80O7kZw&s"
               }
-              width="120"
-              height="120"
+              width={120}
+              height={120}
             />
             <Image
-              className="h-36 w-40"
+              className="h-16 md:h-36 w-24 md:w-40"
               alt=""
               src={
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwR1p5ZBJ1JPDcm-ZDln9GeWWDiXXG_sLKEQ&s"
               }
-              width="180"
-              height="100"
+              width={180}
+              height={100}
             />
             <Image
-              className="h-36 w-40"
+              className="h-16 md:h-36 w-24 md:w-40"
               alt=""
               src={
                 "https://static.vecteezy.com/system/resources/thumbnails/046/006/102/small/education-logo-design-template-for-school-and-organization-vector.jpg"
               }
-              width="250"
-              height="50"
+              width={250}
+              height={50}
             />
             <Image
-              className="h-20 w-60"
+              className="h-12 md:h-20 w-32 md:w-60"
               alt=""
               src={
                 "https://tisbadlapur.edu.in/wp-content/uploads/2023/10/cropped-Thanekar-International-School-Logo-Final-1-e1697712922602.png"
               }
-              width="250"
-              height="80"
+              width={250}
+              height={80}
             />
             <Image
-              className="h-28 w-36"
+              className="h-12 md:h-28 w-24 md:w-36"
               alt=""
               src={
                 "https://assets.zigchat.com/channel-media/r6RRcUdyCmjBq9ALMWGxynphnXLaQwGhVM1llVP31730712377960/BIS_LOGO_Transparent.png"
               }
-              width="250"
-              height="80"
+              width={250}
+              height={80}
             />
           </div>
         </Fade>

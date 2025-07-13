@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import Footer from "@/components/Footer"
-import StickyHeader from "@/components/StickyHeader"
-import StickyHeaderTwo from "@/components/StickyHeaderTwo"
-import { Lexend } from "next/font/google"
-import Image from "next/image"
-import { Fade } from "react-awesome-reveal"
+import Footer from "@/components/Footer";
+import StickyHeader from "@/components/StickyHeader";
+import StickyHeaderTwo from "@/components/StickyHeaderTwo";
+import { Lexend } from "next/font/google";
+import Image from "next/image";
+import { Fade } from "react-awesome-reveal";
 
 // Load Lexend with specific styles
 const lexend = Lexend({
@@ -14,10 +14,10 @@ const lexend = Lexend({
   variable: "--font-lexend",
 });
 
-export default function Examination_Policy(){
+export default function Examination_Policy() {
   return (
     <div
-      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify`}
+      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify min-h-screen`}
     >
       {/* Header Section */}
       <header>
@@ -27,7 +27,7 @@ export default function Examination_Policy(){
 
       {/* Admission Process Background image */}
       <Image
-        className="w-full"
+        className="w-full h-40 sm:h-64 md:h-80 lg:h-96 object-cover"
         src={
           "https://img.freepik.com/premium-photo/kids-school-competence_1260728-27060.jpg?w=826"
         }
@@ -37,13 +37,13 @@ export default function Examination_Policy(){
       />
 
       {/* Admission Enquiry Form Section */}
-      <section className="xl:mx-16 xl:py-16 lg:mx-12 lg:py-10 md:mx-8 md:py-10">
+      <section className="mx-2 sm:mx-4 md:mx-8 lg:mx-12 xl:mx-16 py-4 md:py-10 lg:py-10 xl:py-16">
         <Fade direction="left" triggerOnce={true}>
-          <h1 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl">
+          <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Admission Procedure & Age{" "}
             <span className="text-[#1B6B8F] font-bold">Criteria</span>
           </h1>
-          <h2 className="xl:text-xl lg:text-lg md:-mt-1">
+          <h2 className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl md:-mt-1">
             Admission Age Criteria
           </h2>
         </Fade>

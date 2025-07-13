@@ -22,7 +22,7 @@ const StickyHeader = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 bg-[#000000ab] shadow-md flex justify-between items-center text-white scroll-smooth transition-transform duration-500 ${
+      className={`hidden fixed top-0 left-0 w-full z-50 bg-[#000000ab] shadow-md sm:flex justify-between items-center text-white scroll-smooth transition-transform duration-500 ${
         isAtTop ? "translate-y-0" : "-translate-y-full"
       } xl:py-2 xl:px-3 lg:py-2 lg:px-2 md:py-1.5 md:text-[10px] md:px-1 xs`}
     >

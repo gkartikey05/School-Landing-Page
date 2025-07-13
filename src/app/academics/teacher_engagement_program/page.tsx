@@ -27,7 +27,7 @@ export default function Teacher_Engagement_Program() {
 
       {/* Admission Process Background image */}
       <Image
-        className="w-full"
+        className="w-full h-40 sm:h-64 md:h-80 lg:h-96 object-cover"
         src={
           "https://img.freepik.com/premium-photo/quotheartfelt-teachers-day-tribute-rural-classroomquot_1280275-333747.jpg?w=826"
         }
@@ -37,10 +37,10 @@ export default function Teacher_Engagement_Program() {
       />
 
       {/* Teacher Engagement Program Section */}
-      <section className="xl:mx-16 xl:pt-12 xl:pb-16 lg:mx-12 lg:pt-10 lg:pb-14 md:mx-8 md:pt-8 md:pb-12">
+      <section className="mx-2 sm:mx-4 md:mx-8 lg:mx-12 xl:mx-16 pt-4 md:pt-8 lg:pt-10 xl:pt-12 pb-4 md:pb-12 lg:pb-14 xl:pb-16">
         <div>
           <Fade direction="down" triggerOnce={true}>
-            <h1 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl">
+            <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
               Teacher Engagement{" "}
               <span className="text-[#1B6B8F] font-bold">Program</span>
             </h1>
@@ -50,11 +50,11 @@ export default function Teacher_Engagement_Program() {
         <Fade direction="up" triggerOnce={true} duration={1000} delay={300}>
           <div
             id="cards-container"
-            className="flex flex-wrap justify-between xl:gap-10 xl:mt-6 lg:gap-8 lg:mt-5 md:gap-6 md:mt-4"
+            className="flex flex-col sm:flex-row sm:flex-wrap justify-between gap-4 md:gap-6 lg:gap-8 xl:gap-10 mt-4 md:mt-4 lg:mt-5 xl:mt-6"
           >
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -63,9 +63,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 In Service Teachers Training on Integration of Activities in
                 Early Years
               </h3>
@@ -73,7 +73,7 @@ export default function Teacher_Engagement_Program() {
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -82,16 +82,16 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 Teachers Training on Classroom Management
               </h3>
             </div>
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -100,9 +100,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 Awareness session on children protection and safety for the
                 staff Years
               </h3>
@@ -110,7 +110,7 @@ export default function Teacher_Engagement_Program() {
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -119,9 +119,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 First Aid Safety, Equipping Individuals with Life Saving Skills
                 Years
               </h3>
@@ -129,7 +129,7 @@ export default function Teacher_Engagement_Program() {
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -138,9 +138,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 National Curriculum Framework, Revolutionising Foundational
                 Learning
               </h3>
@@ -148,7 +148,7 @@ export default function Teacher_Engagement_Program() {
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -157,16 +157,16 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2">
                 Training on Self Defence
               </h3>
             </div>
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -175,16 +175,16 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 Seminar on NEP
               </h3>
             </div>
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -193,16 +193,16 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-1 lg:py-1.5 lg:px-2">
                 Staff Zumba Session
               </h3>
             </div>
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -211,9 +211,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 Two Day Transformational Workshop on WOW@Work (Ways of Winning
                 at Work)
               </h3>
@@ -221,7 +221,7 @@ export default function Teacher_Engagement_Program() {
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -230,9 +230,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2 md:py-1">
                 In Service Teacher Training on National Curriculum Framework for
                 Preparatory Stage
               </h3>
@@ -240,7 +240,7 @@ export default function Teacher_Engagement_Program() {
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -249,16 +249,16 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2">
                 Teacher Engagement Workshop on - MS Office
               </h3>
             </div>
 
             <div
               id="cards"
-              className="border border-gray-300 w-[31%] rounded-lg xl:shadow-xl lg:shadow-lg md:shadow-md"
+              className="border border-gray-300 w-full sm:w-[48%] md:w-[31%] rounded-lg shadow-md lg:shadow-lg xl:shadow-xl mb-4"
             >
               <Image
                 src={
@@ -267,9 +267,9 @@ export default function Teacher_Engagement_Program() {
                 alt="Card Image"
                 width={2000}
                 height={2000}
-                className="aspect-auto rounded-t-lg"
+                className="w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 object-cover rounded-t-lg"
               />
-              <h3 className="text-center font-semibold py-2 px-3 lg:text-sm lg:py-1.5 lg:px-2 md:text-xs md:py-1 md:px-1">
+              <h3 className="text-center font-semibold text-xs sm:text-sm md:text-base py-2 px-2 md:px-3 lg:py-1.5 lg:px-2">
                 Teacher Engagement Workshop on Phonics
               </h3>
             </div>

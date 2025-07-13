@@ -111,27 +111,27 @@ export default function Admission_Enquiry() {
       </header>
 
       {/* Admission Enquiry Background */}
-      <div className="bg-[#083342] w-full xl:h-26.5 lg:h-22 md:h-17"></div>
+      <div className="bg-[#083342] w-full h-16 sm:h-20 md:h-17 lg:h-22 xl:h-26.5"></div>
 
       {/* Admission Enquiry Form Section */}
-      <section className="bg-[#f3f3fe] xl:px-16 xl:pt-14 xl:pb-16 lg:px-12 lg:pt-12 lg:pb-14 md:px-8 md:pt-10 md:pb-12">
+      <section className="bg-[#f3f3fe] px-2 sm:px-4 md:px-8 lg:px-12 xl:px-16 pt-4 md:pt-10 lg:pt-12 xl:pt-14 pb-4 md:pb-12 lg:pb-14 xl:pb-16">
         <Fade direction="up" triggerOnce={true}>
           <div className="min-h-screen flex items-center justify-center">
-            <div className="w-full max-w-4/6 bg-white rounded shadow-lg xl:py-8 lg:py-6 md:py-4">
-              <h2 className="font-semibold xl:border-b-3 xl:text-3xl xl:px-10 xl:pb-6 lg:text-2xl lg:px-8 lg:pb-5 md:border-b-2 md:text-xl md:px-6 md:pb-4">
+            <div className="w-full max-w-full sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-4/6 bg-white rounded shadow-lg py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12">
+              <h2 className="font-semibold border-b-2 text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-3xl px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10 pb-2 sm:pb-3 md:pb-4 lg:pb-5 xl:pb-6">
                 School Admission Enquiry Form
               </h2>
               <form
                 onSubmit={handleSubmit}
-                className="xl:px-10 lg:px-8 md:px-6"
+                className="px-2 sm:px-4 md:px-6 lg:px-8 xl:px-10"
               >
                 {/* Student Personal Information */}
-                <h3 className="border-b-2 font-semibold xl:mt-5 xl:pb-3 xl:mb-6 xl:text-xl lg:text-lg md:mt-3 md:pb-2 md:mb-3">
+                <h3 className="border-b-2 font-semibold mt-3 sm:mt-4 md:mt-5 pb-2 sm:pb-2 md:pb-3 mb-3 sm:mb-4 md:mb-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl">
                   Student Information
                 </h3>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="firstName"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -150,7 +150,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="lastName"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -170,8 +170,8 @@ export default function Admission_Enquiry() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="dob"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -189,7 +189,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="gender"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -215,8 +215,8 @@ export default function Admission_Enquiry() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="grade"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -250,7 +250,7 @@ export default function Admission_Enquiry() {
                     </select>
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="previousSchool"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -269,8 +269,8 @@ export default function Admission_Enquiry() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="email"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -289,7 +289,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="studentPhone"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -314,8 +314,8 @@ export default function Admission_Enquiry() {
                   Parents/Guardian Information
                 </h3>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="fatherName"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -334,7 +334,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="motherName"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -435,12 +435,12 @@ export default function Admission_Enquiry() {
                 </div>
 
                 {/* Additional Information */}
-                <h3 className="border-b-2 font-semibold xl:mt-5 xl:pb-3 xl:mb-6 xl:text-xl lg:text-lg md:mt-3 md:pb-2 md:mb-3">
+                <h3 className="border-b-2 font-semibold mt-3 sm:mt-4 md:mt-5 pb-2 sm:pb-2 md:pb-3 mb-3 sm:mb-4 md:mb-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl">
                   Address Information
                 </h3>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="streetOne"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -459,7 +459,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="streetTwo"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -479,8 +479,8 @@ export default function Admission_Enquiry() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="area"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -499,7 +499,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="city"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -560,12 +560,12 @@ export default function Admission_Enquiry() {
                 </div>
 
                 {/* Enquiry Details */}
-                <h3 className="border-b-2 font-semibold xl:mt-5 xl:pb-3 xl:mb-6 xl:text-xl lg:text-lg md:mt-3 md:pb-2 md:mb-3">
+                <h3 className="border-b-2 font-semibold mt-3 sm:mt-4 md:mt-5 pb-2 sm:pb-2 md:pb-3 mb-3 sm:mb-4 md:mb-6 text-base sm:text-lg md:text-xl lg:text-xl xl:text-xl">
                   Enquiry Details
                 </h3>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="admissionInterest"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -584,7 +584,7 @@ export default function Admission_Enquiry() {
                     />
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="hearAbout"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -611,8 +611,8 @@ export default function Admission_Enquiry() {
                   </div>
                 </div>
 
-                <div className="flex justify-between items-center xl:gap-4 lg:gap-3 md:gap-2">
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                <div className="flex flex-col sm:flex-row justify-between items-center gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="visitSchool"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -635,7 +635,7 @@ export default function Admission_Enquiry() {
                     </select>
                   </div>
 
-                  <div className="w-1/2 xl:mb-6 lg:mb-5 md:mb-4">
+                  <div className="w-full sm:w-1/2 mb-2 sm:mb-0 xl:mb-6 lg:mb-5 md:mb-4">
                     <label
                       htmlFor="visitDate"
                       className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -654,7 +654,7 @@ export default function Admission_Enquiry() {
                   </div>
                 </div>
 
-                <div className="mb-6">
+                <div className="mb-4 sm:mb-5 md:mb-6">
                   <label
                     htmlFor="enquiry"
                     className="block font-medium xl:text-[15px] xl:mb-0.5 lg:text-sm lg:mb-1 md:mb-0.5 md:text-[11px] md:tracking-tight"
@@ -674,7 +674,7 @@ export default function Admission_Enquiry() {
 
                 <button
                   type="submit"
-                  className="bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors xl:w-46 xl:py-2 xl:text-[15px] lg:w-40 lg:py-1.5 lg:text-sm md:w-34 md:py-1 md:text-xs"
+                  className="bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors w-full sm:w-40 md:w-48 lg:w-56 xl:w-60 py-2 text-xs sm:text-sm md:text-base xl:text-[15px]"
                 >
                   Submit Enquiry
                 </button>

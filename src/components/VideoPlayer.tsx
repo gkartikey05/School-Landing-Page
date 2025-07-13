@@ -12,7 +12,7 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ src }) => {
       muted
       loop
       playsInline
-      className="w-full h-full"
+      className="w-full h-40 sm:h-56 md:h-72 lg:h-96 xl:h-full object-cover rounded"
     ></video>
   );
 };

@@ -18,7 +18,7 @@ const lexend = Lexend({
 export default function Admission_Process() {
   return (
     <div
-      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify`}
+      className={`${lexend.className} overflow-x-hidden scroll-smooth text-gray-800 text-justify min-h-screen`}
     >
       {/* Header Section */}
       <header>
@@ -28,7 +28,7 @@ export default function Admission_Process() {
 
       {/* Admission Process Background image */}
       <Image
-        className="w-full"
+        className="w-full h-40 sm:h-64 md:h-80 lg:h-96 object-cover"
         src={
           "https://img.freepik.com/premium-photo/kids-school-creativity_1260728-26581.jpg?w=826"
         }
@@ -38,20 +38,20 @@ export default function Admission_Process() {
       />
 
       {/* Admission Process Section */}
-      <section className="xl:mx-20 xl:py-18 lg:mx-16 lg:py-14 md:mx-12 md:py-10">
+      <section className="mx-2 sm:mx-4 md:mx-12 lg:mx-16 xl:mx-20 py-4 md:py-10 lg:py-14 xl:py-18">
         <Fade direction="down" triggerOnce={true}>
-          <h1 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl">
+          <h1 className="font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl">
             Admission Procedure & Age{" "}
             <span className="text-[#1B6B8F] font-bold">Criteria</span>
           </h1>
         </Fade>
 
         <Fade direction="left" triggerOnce={true}>
-          <h2 className="font-semibold xl:mt-6 xl:text-xl lg:mt-5 lg:text-lg md:mt-4 md:text-sm">
+          <h2 className="font-semibold mt-2 sm:mt-4 md:mt-4 lg:mt-5 xl:mt-6 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
             Admission Age Criteria:
           </h2>
 
-          <ul className="list-disc xl:text-[15px] xl:leading-7 xl:mt-3 lg:text-sm/relaxed md:text-xs/normal md:w-5/6 md:mt-2">
+          <ul className="list-disc text-xs sm:text-sm md:text-base lg:text-sm xl:text-[15px] xl:leading-7 mt-2 sm:mt-2 md:mt-2 lg:mt-3 xl:mt-3 md:w-5/6">
             <li>
               <strong>Nursery Admission Age Eligibility</strong> – The child
               must have completed 3 years of age by <strong>31st March</strong>{" "}
@@ -72,32 +72,32 @@ export default function Admission_Process() {
 
         {/* Age Eligibility Criteria */}
         <Fade direction="up" triggerOnce={true}>
-          <h2 className="font-semibold xl:text-xl lg:text-lg md:mt-8 md:text-sm">
+          <h2 className="font-semibold mt-4 sm:mt-6 md:mt-8 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
             AGE ELIGIBILITY CRITERIA FOR ADMISSION TO ACADEMIC
             <br />
             YEAR 2025-26
           </h2>
 
-          <div className="flex items-center justify-start xl:gap-4.5 xl:mt-6 lg:gap-4 lg:mt-5 md:gap-3 md:mt-4">
-            <div className="flex flex-col justify-center items-center border border-red-500 shadow-lg box-border xl:h-44 xl:text-lg lg:h-36 lg:text-[15px] md:w-1/3 md:h-28 md:text-sm">
-              <strong className="">Nursery</strong>3 Years
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-2 sm:gap-3 md:gap-3 lg:gap-4 xl:gap-4.5 mt-2 sm:mt-4 md:mt-4 lg:mt-5 xl:mt-6">
+            <div className="flex flex-col justify-center items-center border border-red-500 shadow-lg box-border h-20 sm:h-24 md:h-28 lg:h-36 xl:h-44 text-xs sm:text-sm md:text-base lg:text-[15px] xl:text-lg w-full sm:w-1/3">
+              <strong className="">Nursery</strong> 3 Years
             </div>
-            <div className="flex flex-col justify-center items-center border border-red-500 shadow-lg box-border xl:h-44 xl:text-lg lg:h-36 lg:text-[15px] md:w-1/3 md:h-28 md:text-sm">
-              <strong className="">LKG</strong>4 Years
+            <div className="flex flex-col justify-center items-center border border-red-500 shadow-lg box-border h-20 sm:h-24 md:h-28 lg:h-36 xl:h-44 text-xs sm:text-sm md:text-base lg:text-[15px] xl:text-lg w-full sm:w-1/3">
+              <strong className="">LKG</strong> 4 Years
             </div>
-            <div className="flex flex-col justify-center items-center border border-red-500 shadow-lg box-border xl:h-44 xl:text-lg lg:h-36 lg:text-[15px] md:w-1/3 md:h-28 md:text-sm">
-              <strong className="">UKG</strong>5 Years
+            <div className="flex flex-col justify-center items-center border border-red-500 shadow-lg box-border h-20 sm:h-24 md:h-28 lg:h-36 xl:h-44 text-xs sm:text-sm md:text-base lg:text-[15px] xl:text-lg w-full sm:w-1/3">
+              <strong className="">UKG</strong> 5 Years
             </div>
           </div>
         </Fade>
 
         {/* Online Apply Procedure */}
         <Fade direction="left" triggerOnce={true}>
-          <h2 className="font-semibold xl:text-xl lg:mt-12 lg:text-lg md:mt-9 md:text-sm">
+          <h2 className="font-semibold mt-6 sm:mt-8 md:mt-9 lg:mt-12 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
             Apply Online Procedure for Nursery School Admission 2025-26:
           </h2>
 
-          <ul className="list-disc xl:text-[15px] xl:leading-7 lg:text-sm/relaxed lg:mt-4 md:text-xs/normal md:w-5/6 md:mt-3">
+          <ul className="list-disc text-xs sm:text-sm md:text-base lg:text-sm xl:text-[15px] xl:leading-7 mt-2 sm:mt-3 md:mt-3 lg:mt-4 xl:mt-4 md:w-5/6">
             <li>
               <strong>For Classes Nursery to IX</strong>: The Online
               Registration Form for admissions to Classes Nursery to IX for the
@@ -141,12 +141,12 @@ export default function Admission_Process() {
 
         {/* Terms & Conditions */}
         <Fade direction="left" triggerOnce={true}>
-          <h2 className="font-semibold xl:text-xl lg:text-lg md:mt-9 md:text-sm">
+          <h2 className="font-semibold mt-6 sm:mt-8 md:mt-9 lg:mt-12 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
             Terms & Conditions and Instructions for Filling up the <br />
             Online form / Pay
           </h2>
 
-          <ul className="list-disc xl:text-[15px] xl:leading-7 lg:text-sm/relaxed lg:mt-4 md:text-xs/normal md:w-5/6 md:mt-3">
+          <ul className="list-disc text-xs sm:text-sm md:text-base lg:text-sm xl:text-[15px] xl:leading-7 mt-2 sm:mt-3 md:mt-3 lg:mt-4 xl:mt-4 md:w-5/6">
             <li>
               This is the{" "}
               <strong className="font-semibold">
@@ -214,7 +214,7 @@ export default function Admission_Process() {
             </li>
             <li>
               At the time of the interaction, parents are required to carry:
-              <ul className="list-disc xl:text-[15px] xl:leading-7 xl:mt-1 xl:mb-1 lg:text-sm/relaxed lg:mb-0.5 md:text-xs/normal md:w-5/6 md:mt-0.5 md:ml-4 md:mb-0.5">
+              <ul className="list-disc text-xs sm:text-sm md:text-base lg:text-sm xl:text-[15px] xl:leading-7 mt-1 mb-1 sm:mb-0.5 md:w-5/6 md:mt-0.5 md:ml-4">
                 <li>
                   The child&apos;s{" "}
                   <strong className="font-semibold">
@@ -237,7 +237,7 @@ export default function Admission_Process() {
                   .
                 </li>
               </ul>
-              <p className="xl:mb-3 lg:mb-2.5 md:mb-1.5">
+              <p className="mb-1 sm:mb-2 md:mb-2.5 lg:mb-3 xl:mb-3">
                 Any{" "}
                 <strong className="font-semibold">
                   false, misleading, or withheld information
@@ -272,10 +272,10 @@ export default function Admission_Process() {
         </Fade>
 
         {/* Admission Enquiry Button */}
-        <div className="text-center md:mt-5">
+        <div className="text-center mt-4 md:mt-5">
           <Fade direction="up" triggerOnce={true}>
             <Link href="/admission_enquiry">
-              <button className="focus:outline-3 focus:outline-green-200 text-white bg-green-500 hover:duration-200 hover:bg-green-600 shadow-lg xl:text-[16px] xl:px-5 xl:py-2.5 lg:text-sm lg:px-4 lg:py-2 md:rounded md:text-xs md:px-3 md:py-1.5">
+              <button className="focus:outline-3 focus:outline-green-200 text-white bg-green-500 hover:duration-200 hover:bg-green-600 shadow-lg text-xs sm:text-sm md:text-base xl:text-[16px] px-3 sm:px-4 xl:px-5 py-1.5 sm:py-2 lg:py-2 xl:py-2.5 rounded">
                 ADMISSION ENQUIRY
               </button>
             </Link>

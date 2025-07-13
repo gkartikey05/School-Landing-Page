@@ -81,22 +81,22 @@ export default function Awards_Achievement() {
         </Fade>
 
         <Fade direction="up" triggerOnce={true}>
-          <div className="flex xl:gap-4 xl:mt-7 lg:gap-3 lg:mt-6 md:gap-2 md:mt-5">
+          <div className="flex flex-col sm:flex-row xl:gap-4 xl:mt-7 lg:gap-3 lg:mt-6 md:gap-2 md:mt-5 gap-2 sm:gap-3">
             <button
               onClick={() => setFilter("all")}
-              className="bg-[#1B6B8F] hover:opacity-80 focus:outline-none focus:ring-3 focus:ring-blue-200 focus:duration-500 focus:ease-in-out text-white border cursor-pointer xl:text-[16px] xl:px-4 lg:text-sm md:text-xs md:py-2 md:px-3 md:rounded"
+              className="bg-[#1B6B8F] hover:opacity-80 focus:outline-none focus:ring-3 focus:ring-blue-200 focus:duration-500 focus:ease-in-out text-white border cursor-pointer text-xs sm:text-sm md:text-base xl:text-[16px] px-2 sm:px-3 xl:px-4 py-1 sm:py-2 md:py-2 rounded mb-2 sm:mb-0"
             >
               SHOW ALL
             </button>
             <button
               onClick={() => setFilter("school")}
-              className="border cursor-pointer hover:opacity-80 hover:bg-gray-200 focus:outline-none focus:ring-3 focus:ring-blue-200 focus:duration-500 focus:ease-in-out xl:text-[16px] xl:px-4 lg:text-sm md:text-xs md:py-2 md:px-3 md:rounded"
+              className="border cursor-pointer hover:opacity-80 hover:bg-gray-200 focus:outline-none focus:ring-3 focus:ring-blue-200 focus:duration-500 focus:ease-in-out text-xs sm:text-sm md:text-base xl:text-[16px] px-2 sm:px-3 xl:px-4 py-1 sm:py-2 md:py-2 rounded mb-2 sm:mb-0"
             >
               SCHOOL ACHIEVEMENTS/AWARDS
             </button>
             <button
               onClick={() => setFilter("student")}
-              className="border cursor-pointer hover:opacity-80 hover:bg-gray-200 focus:outline-none focus:ring-3 focus:ring-blue-200 focus:duration-500 focus:ease-in-out xl:text-[16px] xl:px-4 lg:text-sm md:text-xs md:py-2 md:px-3 md:rounded"
+              className="border cursor-pointer hover:opacity-80 hover:bg-gray-200 focus:outline-none focus:ring-3 focus:ring-blue-200 focus:duration-500 focus:ease-in-out text-xs sm:text-sm md:text-base xl:text-[16px] px-2 sm:px-3 xl:px-4 py-1 sm:py-2 md:py-2 rounded"
             >
               STUDENTS ACHIEVEMENTS/AWARDS
             </button>
@@ -104,10 +104,10 @@ export default function Awards_Achievement() {
         </Fade>
 
         <Fade direction="up" triggerOnce={true}>
-          <div className="flex justify-start gap-5 lg:mt-10 md:mt-7">
+          <div className="flex flex-col sm:flex-row justify-start gap-2 sm:gap-3 md:gap-5 lg:mt-10 md:mt-7">
             {/* School Awards/Achievement */}
             {(filter === "all" || filter === "school") && (
-              <div className="border border-gray-300 lg:rounded-lg md:w-1/4 md:rounded">
+              <div className="border border-gray-300 rounded-lg w-full sm:w-1/2 md:w-1/4 mb-2 sm:mb-0">
                 <SlideshowLightbox
                   lightboxIdentifier="lightbox1"
                   framework="next"
@@ -138,11 +138,11 @@ export default function Awards_Achievement() {
                   ))}
                 </SlideshowLightbox>
 
-                <div className="xl:px-4 xl:pb-4 lg:px-3 lg:pb-3 md:px-2 md:pb-2">
-                  <h4 className="xl:mt-3 xl:text-lg lg:text-[16px] lg:mt-2 md:mt-1 md:text-xs md:font-semibold">
+                <div className="px-2 py-2 xl:px-4 xl:pb-4 lg:px-3 lg:pb-3 md:px-2 md:pb-2">
+                  <h4 className="mt-2 text-xs sm:text-sm md:text-base lg:text-[16px] xl:text-lg font-semibold">
                     Christmas Celebration
                   </h4>
-                  <p className="xl:text-[16px] xl:leading-4 lg:text-sm  md:text-xs">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] xl:leading-4">
                     School Celebrating Christmas Events
                   </p>
                 </div>
@@ -151,7 +151,7 @@ export default function Awards_Achievement() {
 
             {/* Student Awards/Achievement */}
             {(filter === "all" || filter === "student") && (
-              <div className="border border-gray-300 lg:rounded-lg md:w-1/4 md:rounded">
+              <div className="border border-gray-300 rounded-lg w-full sm:w-1/2 md:w-1/4">
                 <SlideshowLightbox
                   lightboxIdentifier="lightbox2"
                   framework="next"
@@ -180,11 +180,11 @@ export default function Awards_Achievement() {
                   ))}
                 </SlideshowLightbox>
 
-                <div className="xl:px-4 xl:pb-4 lg:px-3 lg:pb-3 md:px-2 md:pb-2">
-                  <h4 className="xl:mt-3 xl:text-lg lg:text-[16px] lg:mt-2 md:mt-1 md:text-xs md:font-semibold">
+                <div className="px-2 py-2 xl:px-4 xl:pb-4 lg:px-3 lg:pb-3 md:px-2 md:pb-2">
+                  <h4 className="mt-2 text-xs sm:text-sm md:text-base lg:text-[16px] xl:text-lg font-semibold">
                     Inter-House Competition
                   </h4>
-                  <p className="xl:text-[16px] xl:leading-4 lg:text-sm md:text-xs">
+                  <p className="text-xs sm:text-sm md:text-base lg:text-sm xl:text-[16px] xl:leading-4">
                     Students Engaging in Inter-House Competition
                   </p>
                 </div>
