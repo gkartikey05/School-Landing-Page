@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Demo School Website | Kartikey Gupta",
+  title: "School Landing Page | Kartikey Gupta",
   description: "This is a demo school website for practice purpose developed by Kartikey Gupta, with Next.js and TypeScipt."
 };
 
