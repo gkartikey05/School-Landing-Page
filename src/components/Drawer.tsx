@@ -16,9 +16,9 @@ import { GrGallery } from "react-icons/gr";
 
 export default function RightSideDrawer() {
   const [isOpen, setIsOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
 
-  const toggleDropdown = (index) => {
+  const toggleDropdown = (index: number) => {
     setOpenDropdown(openDropdown === index ? null : index);
   };
 
